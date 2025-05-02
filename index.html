@@ -2,100 +2,26 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buscar Textarea</title>
-    <style>
-        #resultArea {
-            margin-top: 20px;
-            padding: 15px;
-            border: 1px solid #ccc;
-            min-height: 50px;
-            background-color: #f9f9f9;
-            white-space: pre-wrap; /* Para preservar quebras de linha do textarea */
-            word-wrap: break-word;
-        }
-        .loading {
-            font-style: italic;
-            color: #555;
-        }
-        .error {
-            color: red;
-            font-weight: bold;
-        }
-    </style>
+    <meta name=”referrer” content=”none”>
+    <link rel="stylesheet" type="text/css" href="css/header.css" media="screen" />
+    <title>SilvioAntunes</title>
+    <staly
 </head>
+
 <body>
 
-    <h1>Página Inicial</h1>
-    <p>Clique no botão para buscar o conteúdo da textarea em outra página.</p>
+<header>
+    <button class="buttonHead">&#9776</button>
+    <h1 class="title">SilvioAntunes</h1>
+</header>
 
-    <button id="fetchButton">Buscar Conteúdo da Textarea</button>
-
-    <h2>Conteúdo Encontrado:</h2>
-    <div id="resultArea">
-        </div>
-
-    <script>
-        // Seleciona o botão e a área de resultado
-        const fetchButton = document.getElementById('fetchButton');
-        const resultArea = document.getElementById('resultArea');
-
-        // Adiciona o listener de evento ao botão
-        fetchButton.addEventListener('click', () => {
-            // ---- CONFIGURE AQUI ----
-            const targetURL = 'https://github.com/silvioantunes/c/blob/main/test.html'; // URL da página que contém a textarea
-            // Seletor CSS para encontrar a textarea. Pode ser um ID (#meuTexto),
-            // uma classe (.classeDaTextArea), ou apenas 'textarea' se for a única.
-            // Seja o mais específico possível se houver várias textareas.
-            const textareaSelector = 'textarea'; 
-            // ------------------------
-
-            // Mostra mensagem de carregando
-            resultArea.textContent = 'Buscando conteúdo...';
-            resultArea.className = 'loading'; // Aplica classe para estilo opcional
-
-            // Usa a API Fetch para buscar a página alvo
-            fetch(targetURL)
-                .then(response => {
-                    // Verifica se a requisição foi bem-sucedida (status 2xx)
-                    if (!response.ok) {
-                        // Se não foi OK, lança um erro com o status
-                        throw new Error(`Erro HTTP! Status: ${response.status}`);
-                    }
-                    // Se foi OK, retorna o conteúdo da resposta como texto (HTML)
-                    return response.text();
-                })
-                .then(htmlText => {
-                    // O HTML da página alvo foi recebido como texto
-
-                    // Usa DOMParser para analisar o HTML recebido de forma segura
-                    // Isso cria um documento HTML virtual na memória
-                    const parser = new DOMParser();
-                    const fetchedDoc = parser.parseFromString(htmlText, 'text/html');
-
-                    // Procura pela textarea dentro do documento HTML analisado
-                    const textareaElement = fetchedDoc.querySelector(textareaSelector);
-
-                    // Verifica se a textarea foi encontrada
-                    if (textareaElement) {
-                        // Extrai o conteúdo da textarea (.value é a propriedade correta)
-                        const textareaContent = textareaElement.value;
-                        // Exibe o conteúdo na área de resultado da página inicial
-                        resultArea.textContent = textareaContent;
-                        resultArea.className = ''; // Remove classe de loading/erro
-                    } else {
-                        // Se não encontrou a textarea
-                        throw new Error(`Textarea com o seletor "${textareaSelector}" não encontrada na página alvo.`);
-                    }
-                })
-                .catch(error => {
-                    // Captura qualquer erro que ocorreu durante o fetch ou processamento
-                    console.error('Erro ao buscar ou processar a página:', error);
-                    resultArea.textContent = `Falha ao obter o conteúdo. Erro: ${error.message}. Verifique o console para mais detalhes e as permissões CORS.`;
-                    resultArea.className = 'error'; // Aplica classe de erro
-                });
-        });
-    </script>
+<div class="menuHead">
+    <div id="home">    Inicio   </div>
+    <div id="email">   Email    </div>
+    <div id="github">  GitHub   </div>
+    <div id="LinkedIn">LinkedIn </div>
+    <div id="Telegram">Telegram </div>
+</div>
 
 </body>
 </html>
