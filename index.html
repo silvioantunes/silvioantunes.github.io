@@ -4,18 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="referrer" content="none">
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="style.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="org/silvioantunes/styleSheet/body/body.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="org/silvioantunes/styleSheet/button/buttonOpenCloseNav.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="org/silvioantunes/styleSheet/head/header.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="org/silvioantunes/styleSheet/head/title.css" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="org/silvioantunes/styleSheet/nav/nav.css" media="screen"/>
     <title>SilvioAntunes</title>
 </head>
 <body>
 
-<header id="main-header"> <a href="#menu_Nav" id="buttonOpenNav_Head" class="buttonOpenNav_Head">&#9776;</a>
-    <h1 id="title_Head" class="title_Head">SilvioAntunes</h1>
+<header>
+	<a href="#menu_Nav" id="buttonOpenNav_Head" class="buttonOpenCloseNav">&#9776;</a>
+    <a href="#" id="title_Head">SilvioAntunes</a>
 </header>
 
-<nav id="menu_Nav" class="menu_Nav">
-    <a href="#" id="buttonCloseNav_Head" class="buttonCloseNav_Head">X</a>
-
+<nav id="menu_Nav">
+    <a href="#" id="buttonCloseNav_Nav" class="buttonOpenCloseNav">X</a>
     <a id="home_Nav"     class="lista_Nav" href="#">Inicio</a>
     <a id="email_Nav"    class="lista_Nav" href="#">Email</a>
     <a id="github_Nav"   class="lista_Nav" href="#">GitHub</a>

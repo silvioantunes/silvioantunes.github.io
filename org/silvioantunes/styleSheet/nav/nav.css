@@ -1,0 +1,93 @@
+/*package: org.silvioantunes.styleSheet.nav*/
+nav {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    position: fixed;
+    top: 0;
+    width: 100%; /* Ocupa x% da largura da tela */
+    right: -100%; /* Começa x% fora da tela para a direita */
+    height: 100%;
+    background-color: #333333;
+    transition: right 0.5s ease-in-out; /*tempo do menu rolar na tela para esquerda*/
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+    padding-top: 70px; /* Espaço para o botão fechar */
+    overflow-y: auto; /* Adiciona scroll se o conteúdo for maior que a altura */
+}
+
+nav a {
+	text-decoration: none;
+}
+
+/* Estado Ativo do Menu */
+nav:target {
+    right: 0; /* Move o menu para a tela */
+}
+
+/* Itens do menu Nav */
+.lista_Nav {
+    display: block;
+    padding: 15px 0;
+    color: #ffffff;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s, background-color 0.2s, border-bottom 0.2s;
+    text-align: center;
+}
+/*Efeito do Menu com o cursor*/
+.lista_Nav:hover {
+    color: #7FFFD4;
+    border-bottom: 1px solid #0cccac;
+    background-color: #0e0800;
+}
+
+
+/* CELULAR PEQUENO - até 375px */
+@media (max-width: 375px) {
+	nav {
+		font-size: 14px;
+	}
+}
+
+/* CELULAR MÉDIO - até 480px */
+@media (max-width: 480px) {
+	nav {
+		font-size: 18px;
+	}
+}
+
+/* CELULAR GRANDE / TABLET PORTAIT - até 768px */
+@media (max-width: 768px) {
+	nav {
+		font-size: 22px;
+		width: 80%; /* Ocupa x% da largura da tela */
+		right: -80%; /* Começa x% fora da tela para a direita */
+	}
+}
+
+/* TABLET LANDSCAPE - até 992px */
+@media (max-width: 992px) {
+	nav {
+		font-size: 26px;
+		width: 60%; /* Ocupa x% da largura da tela */
+		right: -60%; /* Começa x% fora da tela para a direita */
+	}
+}
+
+/* NOTEBOOK / DESKTOP PEQUENO - até 1200px */
+@media (max-width: 1200px) {
+	nav {
+		font-size: 30px;
+		width: 40%; /* Ocupa x% da largura da tela */
+		right: -40%; /* Começa x% fora da tela para a direita */
+	}
+}
+
+/* DESKTOP GRANDE - acima de 1200px */
+@media (min-width: 1201px) {
+	nav {
+		font-size: 34px;
+		width: 20%; /* Ocupa x% da largura da tela */
+		right: -20%; /* Começa x% fora da tela para a direita */
+	}
+}
