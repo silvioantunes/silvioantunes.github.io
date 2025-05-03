@@ -1,0 +1,151 @@
+/* Estilos Gerais e Reset Básico */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    padding-top: 60px; /* Espaço para o header fixo */
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Cabeçalho Fixo Ajustado */
+#main-header {
+    background-color: #333333;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px; /* Altura definida */
+    z-index: 999;
+    display: flex; /* Usar flexbox para alinhamento vertical */
+    align-items: center; /* Centraliza itens verticalmente */
+    padding: 0 15px; /* Espaçamento nas laterais */
+    box-sizing: border-box;
+    /* position: relative; não é necessário pois fixed já estabelece contexto */
+}
+
+/* Título Centralizado no Cabeçalho */
+.title_Head {
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center; /* Centraliza o texto */
+    flex-grow: 1; /* Faz o título ocupar o espaço disponível */
+    margin: 0; /* Remove margens padrão do H1 */
+    /* Adiciona padding para evitar que o texto fique sob o botão absoluto */
+    /* Ajuste o valor (60px) conforme o tamanho/padding do seu botão */
+    padding-left: 60px;
+    padding-right: 60px;
+    box-sizing: border-box; /* Garante que padding não aumente o tamanho total */
+}
+
+/* Botão Abrir Menu (Posicionado Absolutamente) */
+.buttonOpenNav_Head {
+    display: block;
+    cursor: pointer;
+    color: #7FFFD4;
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    width: 45px; /* Define uma largura para cálculo do padding do título */
+    height: 45px; /* Define uma altura */
+    box-sizing: border-box;
+
+    /* Posicionamento absoluto */
+    position: absolute;
+    right: 10px; /* Distância da borda direita */
+    top: 50%; /* Alinha ao meio vertical */
+    transform: translateY(-50%); /* Ajuste fino vertical */
+    z-index: 1001; /* Garante que fique sobre outros elementos se necessário */
+}
+
+
+/* Navegação Off-Canvas Ajustada */
+.menu_Nav {
+    position: fixed;
+    top: 0;
+    width: 80%; /* Ocupa 80% da largura da tela */
+    max-width: 400px; /* Limita a largura máxima em telas grandes */
+    right: -80%; /* Começa 80% fora da tela para a direita */
+    /* Se max-width for atingido, right: -400px; pode ser uma alternativa,
+       mas right: -80% geralmente funciona bem */
+    height: 100%;
+    background-color: #333;
+    color: white;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+    padding-top: 70px; /* Espaço para o botão fechar */
+    overflow-y: auto; /* Adiciona scroll se o conteúdo for maior que a altura */
+}
+
+/* Estado Ativo do Menu */
+#menu_Nav:target {
+    right: 0; /* Move o menu para a tela */
+}
+
+/* Botão Fechar Menu (Dentro do Nav) */
+.buttonCloseNav_Head {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    display: block;
+    cursor: pointer;
+    color: #7FFFD4;
+    font-size: 25px;
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    z-index: 1001; /* Garante que fique clicável */
+}
+
+/* Links do Menu Centralizados */
+.lista_Nav {
+    display: block;
+    padding: 15px 0;
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s, background-color 0.2s, border-bottom 0.2s;
+    text-align: center; /* <<< ADICIONADO PARA CENTRALIZAR O TEXTO >>> */
+}
+
+.lista_Nav:hover {
+    color: #7FFFD4;
+    border-bottom: 1px solid #0cccac;
+    background-color: #0e0800;
+}
+@media (max-width: 600px) {
+
+    /* Reduz o padding lateral do título no cabeçalho */
+    .title_Head {
+        padding-left: 45px; /* Reduz padding esquerdo */
+        padding-right: 45px; /* Reduz padding direito */
+        font-size: 18px; /* Opcional: Reduzir um pouco a fonte do título */
+    }
+
+    /* Opcional: Reduzir um pouco o botão de abrir/fechar se necessário */
+    .buttonOpenNav_Head,
+    .buttonCloseNav_Head {
+        font-size: 22px;
+        /* Ajuste width/height/padding se o botão foi definido com tamanho fixo */
+    }
+
+    /* Opcional: Ajustar padding dos itens do menu */
+    .lista_Nav {
+        padding: 12px 0;
+        font-size: 15px;
+    }
+}
+
+/* Para telas ainda menores (ex: < 400px) */
+@media (max-width: 400px) {
+    .title_Head {
+        padding-left: 40px;
+        padding-right: 40px;
+        font-size: 16px;
+    }
+    /* Outros ajustes se necessário */
+}
