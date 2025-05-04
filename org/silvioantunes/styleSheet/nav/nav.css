@@ -1,7 +1,7 @@
 /*package: org.silvioantunes.styleSheet.nav*/
 nav {
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     position: fixed;
     top: 0;
     width: 100%; /* Ocupa x% da largura da tela */
@@ -42,26 +42,30 @@ nav:target {
 }
 
 
-/* CELULAR PEQUENO - até 375px */
-@media (max-width: 375px) {
-	nav {
-		font-size: 14px;
-	}
-}
-
-/* CELULAR MÉDIO - até 480px */
-@media (max-width: 480px) {
+/* CELULAR Normal - até 275px */
+@media (max-width: 275px) {
 	nav {
 		font-size: 18px;
+		width: 80%; /* Ocupa x% da largura da tela */
+		right: -80%; /* Começa x% fora da tela para a direita */
 	}
 }
 
-/* CELULAR GRANDE / TABLET PORTAIT - até 768px */
+/* CELULAR Grande - até 480px */
+@media (max-width: 480px) {
+	nav {
+		font-size: 20px;
+		width: 80%; /* Ocupa x% da largura da tela */
+		right: -80%; /* Começa x% fora da tela para a direita */
+	}
+}
+
+/*TABLET PORTAIT - até 768px */
 @media (max-width: 768px) {
 	nav {
 		font-size: 22px;
-		width: 80%; /* Ocupa x% da largura da tela */
-		right: -80%; /* Começa x% fora da tela para a direita */
+		width: 30%; /* Ocupa x% da largura da tela */
+		right: -30%; /* Começa x% fora da tela para a direita */
 	}
 }
 
@@ -69,8 +73,8 @@ nav:target {
 @media (max-width: 992px) {
 	nav {
 		font-size: 26px;
-		width: 60%; /* Ocupa x% da largura da tela */
-		right: -60%; /* Começa x% fora da tela para a direita */
+		width: 30%; /* Ocupa x% da largura da tela */
+		right: -30%; /* Começa x% fora da tela para a direita */
 	}
 }
 
@@ -78,8 +82,8 @@ nav:target {
 @media (max-width: 1200px) {
 	nav {
 		font-size: 30px;
-		width: 40%; /* Ocupa x% da largura da tela */
-		right: -40%; /* Começa x% fora da tela para a direita */
+		width: 30%; /* Ocupa x% da largura da tela */
+		right: -30%; /* Começa x% fora da tela para a direita */
 	}
 }
 
@@ -87,7 +91,7 @@ nav:target {
 @media (min-width: 1201px) {
 	nav {
 		font-size: 34px;
-		width: 20%; /* Ocupa x% da largura da tela */
-		right: -20%; /* Começa x% fora da tela para a direita */
+		width: 40%; /* Ocupa x% da largura da tela */
+		right: -40%; /* Começa x% fora da tela para a direita */
 	}
 }

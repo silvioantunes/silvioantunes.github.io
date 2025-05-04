@@ -14,8 +14,8 @@
 }
 
 
-/* CELULAR PEQUENO - até 375px */
-@media (max-width: 375px) {
+/* CELULAR Normal - até 275px */
+@media (max-width: 275px) {
 	#title_Head {
 		font-size: 16px;
         padding-left: 35px;

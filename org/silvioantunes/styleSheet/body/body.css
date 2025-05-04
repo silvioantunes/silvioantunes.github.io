@@ -6,8 +6,8 @@ body {
 
 }
 
-/* CELULAR PEQUENO - até 375px */
-@media (max-width: 375px) {
+/* CELULAR Normal - até 275px */
+@media (max-width: 275px) {
 	body {
 		font-size: 12px;
 	}

@@ -1,0 +1,23 @@
+/* CELULAR PEQUENO - até 375px */
+@media (max-width: 375px) {
+}
+
+/* CELULAR MÉDIO - até 480px */
+@media (max-width: 480px) {
+}
+
+/* CELULAR GRANDE / TABLET PORTAIT - até 768px */
+@media (max-width: 768px) {
+}
+
+/* TABLET LANDSCAPE - até 992px */
+@media (max-width: 992px) {
+}
+
+/* NOTEBOOK / DESKTOP PEQUENO - até 1200px */
+@media (max-width: 1200px) {
+}
+
+/* DESKTOP GRANDE - acima de 1200px */
+@media (min-width: 1201px) {
+}
