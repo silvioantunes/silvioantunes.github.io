@@ -24,11 +24,10 @@ void main() {
     double c = 0.1;
     float d  = 0.3;
 
-    printf( "\n Tipo da variável a: %s,\n valor armazenado na variável a = %d,\n tamanho da variável a:%zu bytes\n" type_name( a ), a, sizeof( a ) );
-
-    printf( " %s b = %f;\n %s c = %f;\n b + c == %f;\n" type_name( b ), b, type_name( c ), c, b + c );
+    printf( "Tipo da variável a: %s,\nvalor armazenado na variável a = %d,\ntamanho da variável a: %zu bytes.\n", type_name( a ), a, sizeof( a ) );
+    printf( "%s b = %f;\n%s c = %f;\nb + c == %f;\n", type_name( b ), b, type_name( c ), c, b + c );
     
     if( type_name( d ) ==  "float" )
-        printf( " A variável d é uma variável de tipo float.\n\n" );
-    else printf( " A variável d não é uma variável de tipo float.\n\n" );
+        printf( "A variável d é uma variável de tipo float.\n" );
+    else printf( "A variável d não é uma variável de tipo float.\n" );
 }

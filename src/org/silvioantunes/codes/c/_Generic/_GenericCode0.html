@@ -1,0 +1,9 @@
+#include <stdio.h>
+    void main() {
+        int A = 0;
+        float B = 0;
+    
+        printf( "A variável A é do tipo: %s.\n", _Generic( ( A ), int: "Integer", float: "Float" ) );
+        printf( "A variável B é do tipo: %s.\n", _Generic( ( B ), int: "Integer", float: "Float" ) );
+    }   
+}
