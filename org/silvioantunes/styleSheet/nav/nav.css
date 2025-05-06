@@ -1,0 +1,85 @@
+/* Overlay - inicialmente escondido */
+.overlay {
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000080;
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+/*Inicialmente escondido */
+nav {
+	font-family: 'Roboto', sans-serif;
+	position: fixed;
+    top: 0;
+    width: 100%; /* Ocupa x% da largura da tela */
+    right: -100%; /* Começa x% fora da tela para a direita */
+    height: 100%;
+    transition: right 0.5s ease; /*tempo do menu rolar na tela para esquerda*/
+    background-color: #333333;
+    z-index: 1000;
+    box-sizing: border-box;
+    padding: 20px;
+    padding-top: 70px; /* Espaço para o botão fechar */
+    overflow-y: auto; /* Adiciona scroll se o conteúdo for maior que a altura */
+}
+        
+nav iframe {
+	width: 100%;
+    height: 100%;
+    border: none;
+}
+
+nav:target {
+    right: 0; /* Move o menu para a tela */
+}
+nav:target ~ .overlay {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* Celulares grandes - maiores a 276px */
+@media (min-width: 276px) {
+	nav {
+		width: 80%; /* Ocupa x% da largura da tela */
+		right: -80%; /* Começa x% fora da tela para a direita */
+	}
+}
+
+/* Tablets pequenos - maiores a 481px */
+@media (min-width: 481px) {
+	nav {
+		width: 45%; /* Ocupa x% da largura da tela */
+		right: -45%; /* Começa x% fora da tela para a direita */
+	}
+}
+
+/* Tablets - maiores que  769px */
+@media (min-width: 769px) {
+	nav {
+		width: 45%; /* Ocupa x% da largura da tela */
+		right: -45%; /* Começa x% fora da tela para a direita */
+	}
+}
+
+/* Notebooks pequenos - maiores que 993px */
+@media (min-width: 993px) {
+	nav {
+		width: 40%; /* Ocupa x% da largura da tela */
+		right: -40%; /* Começa x% fora da tela para a direita */
+	}
+}
+
+/* Notebooks / Desktop - maiores que 1201px */
+@media (min-width: 1201px) {
+	nav {
+		width: 40%; /* Ocupa x% da largura da tela */
+		right: -40%; /* Começa x% fora da tela para a direita */
+	}
+}

@@ -1,0 +1,21 @@
+/*Mobile-First*/
+
+/* Celulares grandes - maiores que 275px */
+@media (min-width: 276px) {
+}
+
+/* Tablets pequenos - mairoes que 481px */
+@media (min-width: 481px) {
+}
+
+/* Tablets - maiores que 769px */
+@media (min-width: 769px) {
+}
+
+/* Notebooks pequenos - maiores que 993px */
+@media (min-width: 993px) {
+}
+
+/* Notebooks / DESKTOP - maiores 1201px */
+@media (min-width: 1201px) {
+}

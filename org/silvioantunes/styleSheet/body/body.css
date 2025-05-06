@@ -1,0 +1,42 @@
+/*package: org.silvioantunes.styleSheet.body*/
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 60px; /* Espaço para o header fixo */
+    font-size: 12px;
+	overflow-x: hidden;
+}
+/* Celulares grandes - maiores que 275px */
+@media (min-width: 276px) {
+	body {
+		font-size: 14px;
+	}
+}
+
+/* Tablets pequenos - mairoes que 481px */
+@media (min-width: 481px) {
+	body {
+		font-size: 16px;
+	}
+}
+
+/* Tablets - maiores que 769px */
+@media (min-width: 769px) {
+	body {
+		font-size: 18px;
+	}
+}
+
+/* Notebooks pequenos - maiores que 993px */
+@media (min-width: 993px) {
+	body {
+		font-size: 20px;
+	}
+}
+
+/* Notebooks / DESKTOP - maiores 1201px */
+@media (min-width: 1201px) {
+	body {
+		font-size: 22px;
+	}
+}

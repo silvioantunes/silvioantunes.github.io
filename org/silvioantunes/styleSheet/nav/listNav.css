@@ -1,0 +1,18 @@
+/* Itens do menu Nav */
+.lista_Nav {
+	font-family: 'Roboto', sans-serif;
+	font-size: 28px;
+    display: block;
+    padding: 15px 0;
+    color: #ffffff;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s, background-color 0.2s, border-bottom 0.2s;
+    text-align: center;
+    text-decoration: none;
+}
+/*Efeito do Menu com o cursor*/
+.lista_Nav:hover {
+    color: #7FFFD4;
+    border-bottom: 1px solid #0cccac;
+    background-color: #0e0800;
+}
