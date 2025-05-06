@@ -19,13 +19,15 @@
 )
 
 void main() {
-    int a = 2;
+    int a    = 2;
     double b = 0.6;
     double c = 0.1;
-    printf("Tipo de a: %s\n", type_name(a));
-}
+    float d  = 0.3;
 
-comentarios vermelho
-# azul escuro
-palavras resevadas azul
-tipos roxo
+    printf( "Tipo da variável a: %s,\nvalor armazenado na variável a = %d,\ntamanho da variável a: %zu bytes.\n", type_name( a ), a, sizeof( a ) );
+    printf( "%s b = %f;\n%s c = %f;\nb + c == %f;\n", type_name( b ), b, type_name( c ), c, b + c );
+    
+    if( type_name( d ) ==  "float" )
+        printf( "A variável d é uma variável de tipo float.\n" );
+    else printf( "A variável d não é uma variável de tipo float.\n" );
+}

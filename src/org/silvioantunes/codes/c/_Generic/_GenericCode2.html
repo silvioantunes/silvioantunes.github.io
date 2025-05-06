@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+    //_Generic retronado funções
+    #define type_name(x) _Generic((x),       \
+        char:           "char",              \
+        signed char:    "signed char",       \
+        unsigned char:  "unsigned char",     \
+        short:          "short",             \
+        unsigned short: "unsigned short",    \
+        int:            "int",               \
+        unsigned int:   "unsigned int",      \
+        long:           "long",              \
+        unsigned long:  "unsigned long",     \
+        long long:      "long long",         \
+        float:          "float",             \
+        double:         "double",            \
+        long double:    "long double",       \
+        default:        "tipo desconhecido"  \
+    )
