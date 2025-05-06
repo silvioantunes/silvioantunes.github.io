@@ -1,14 +1,19 @@
 /*package: org.silvioantunes.styleSheet.button*/
 
 .buttonOpenCloseNav {
+    font-family: 'Roboto', sans-serif;
 	display: block;
     cursor: pointer;
     color: #7FFFD4;
     font-size: 25px;
     font-weight: bolder;
     position: absolute;
-    padding: 10px;
+    padding: 10px 15px;
+    background: none;
+    border: none;
+    text-decoration: none;
 }
+
 /* Botão Abrir Nav */
 #buttonOpenNav_Head {
     width: 45px; /* Define uma largura para cálculo do padding do título */

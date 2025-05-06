@@ -1,47 +1,40 @@
 /*package: org.silvioantunes.styleSheet.body*/
 body {
     margin: 0;
+    padding: 0;
     padding-top: 60px; /* Espaço para o header fixo */
     font-size: 12px;
-
+	overflow-x: hidden;
 }
-
-/* CELULAR Normal - até 275px */
-@media (max-width: 275px) {
-	body {
-		font-size: 12px;
-	}
-}
-
-/* CELULAR MÉDIO - até 480px */
-@media (max-width: 480px) {
+/* Celulares grandes - maiores que 275px */
+@media (min-width: 276px) {
 	body {
 		font-size: 14px;
 	}
 }
 
-/* CELULAR GRANDE / TABLET PORTAIT - até 768px */
-@media (max-width: 768px) {
+/* Tablets pequenos - mairoes que 481px */
+@media (min-width: 481px) {
 	body {
 		font-size: 16px;
 	}
 }
 
-/* TABLET LANDSCAPE - até 992px */
-@media (max-width: 992px) {
+/* Tablets - maiores que 769px */
+@media (min-width: 769px) {
 	body {
 		font-size: 18px;
 	}
 }
 
-/* NOTEBOOK / DESKTOP PEQUENO - até 1200px */
-@media (max-width: 1200px) {
+/* Notebooks pequenos - maiores que 993px */
+@media (min-width: 993px) {
 	body {
 		font-size: 20px;
 	}
 }
 
-/* DESKTOP GRANDE - acima de 1200px */
+/* Notebooks / DESKTOP - maiores 1201px */
 @media (min-width: 1201px) {
 	body {
 		font-size: 22px;

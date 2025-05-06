@@ -10,21 +10,13 @@
     /* Ajuste o valor (60px) conforme o tamanho/padding do seu botão */
    	padding-left: 35px;
     padding-right: 35px;
+    padding-top: 5px;
     box-sizing: border-box; /* Garante que padding não aumente o tamanho total */
 }
 
 
-/* CELULAR Normal - até 275px */
-@media (max-width: 275px) {
-	#title_Head {
-		font-size: 16px;
-        padding-left: 35px;
-        padding-right: 35px;
-	}
-}
-
-/* CELULAR MÉDIO - até 480px */
-@media (max-width: 480px) {
+/* Celulares grandes - maiores que 275px */
+@media (min-width: 276px) {
 	#title_Head {
 		font-size: 20px;
         padding-left: 40px;
@@ -32,8 +24,8 @@
 	}
 }
 
-/* CELULAR GRANDE / TABLET PORTAIT - até 768px */
-@media (max-width: 768px) {
+/* Tablets pequenos - mairoes que 481px */
+@media (min-width: 481px) {
 	#title_Head {
 		font-size: 26px;
         padding-left: 45px;
@@ -41,29 +33,32 @@
 	}
 }
 
-/* TABLET LANDSCAPE - até 992px */
-@media (max-width: 992px) {
+/* Tablets - maiores que 769px */
+@media (min-width: 769px) {
 	#title_Head {
-		font-size: 28px;
+		font-size: 30px;
         padding-left: 50px;
         padding-right: 50px;
+        padding-top: 0px;
 	}
 }
 
-/* NOTEBOOK / DESKTOP PEQUENO - até 1200px */
-@media (max-width: 1200px) {
+/* Notebooks pequenos - maiores que 993px */
+@media (min-width: 993px) {
 	#title_Head {
-		font-size: 32px;
+		font-size: 34px;
         padding-left: 55px;
         padding-right: 55px;
+        padding-top: 0px;
 	}
 }
 
-/* DESKTOP GRANDE - acima de 1200px */
+/* Notebooks / DESKTOP - maiores 1201px */
 @media (min-width: 1201px) {
 	#title_Head {
-		font-size: 36px;
-		padding-left: 60px;
-    	padding-right: 60px;
+		font-size: 38px;
+        padding-left: 60px;
+        padding-right: 60px;
+        padding-top: 0px;
 	}
 }

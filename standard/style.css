@@ -1,23 +1,21 @@
-/* CELULAR PEQUENO - até 375px */
-@media (max-width: 375px) {
+/*Mobile-First*/
+
+/* Celulares grandes - maiores que 275px */
+@media (min-width: 276px) {
 }
 
-/* CELULAR MÉDIO - até 480px */
-@media (max-width: 480px) {
+/* Tablets pequenos - mairoes que 481px */
+@media (min-width: 481px) {
 }
 
-/* CELULAR GRANDE / TABLET PORTAIT - até 768px */
-@media (max-width: 768px) {
+/* Tablets - maiores que 769px */
+@media (min-width: 769px) {
 }
 
-/* TABLET LANDSCAPE - até 992px */
-@media (max-width: 992px) {
+/* Notebooks pequenos - maiores que 993px */
+@media (min-width: 993px) {
 }
 
-/* NOTEBOOK / DESKTOP PEQUENO - até 1200px */
-@media (max-width: 1200px) {
-}
-
-/* DESKTOP GRANDE - acima de 1200px */
+/* Notebooks / DESKTOP - maiores 1201px */
 @media (min-width: 1201px) {
 }
