@@ -1,19 +1,37 @@
 #include <stdio.h>
 
-    //_Generic retronado funções
-    #define type_name(x) _Generic((x),       \
-        char:           "char",              \
-        signed char:    "signed char",       \
-        unsigned char:  "unsigned char",     \
-        short:          "short",             \
-        unsigned short: "unsigned short",    \
-        int:            "int",               \
-        unsigned int:   "unsigned int",      \
-        long:           "long",              \
-        unsigned long:  "unsigned long",     \
-        long long:      "long long",         \
-        float:          "float",             \
-        double:         "double",            \
-        long double:    "long double",       \
-        default:        "tipo desconhecido"  \
-    )
+//_Generic retronado funções
+#define type_name(x) _Generic((x),       \
+	double: doubleType,		     		 \
+    float : floatType,					 \
+    int   : intType,					 \
+    default: defaultType				 \
+) ()
+
+void doubleType() {
+	printf("A variável indicada é do tipo double\n");
+}
+
+void floatType() {
+	printf("A variável indicada é do tipo float\n");
+
+}
+
+void intType() {
+	printf("A variável indicada é do tipo int\n");
+}
+
+void defaultType() {
+	printf("Não foi identificado o tipo da variável\n");
+}
+
+void main() {
+
+	double A = 0;
+	float  B = 0;
+	int    C = 0;
+	
+	type_name(A);
+	type_name(B);
+	type_name(C);
+}
